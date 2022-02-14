@@ -10,6 +10,30 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <!-- background image for hero  -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- the location title  -->
+            <h1> <?php the_title(); ?> </h1>
+            <!-- the location subheading -->
+            <?php if (get_field('subhead')): ?>
+            <p><?php the_field('subhead'); ?></p>
+            <?php endif; ?>
+
+            <!-- formatted date  -->
+            <?php if (get_field('date')): ?>
+            <p>
+                <?php 
+			// convert  date into format that php can work with
+			// then format it to be nice + readable
+			echo date("F Y", strtotime(get_field('date')))
+			?>
+
+            </p>
+            <?php endif; ?>
+        </div>
+    </section>
+
     <header class="entry-header">
 
     </header><!-- .entry-header -->
