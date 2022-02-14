@@ -10,8 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
     <!-- background image for hero  -->
-    <section class="hero">
+    <section class="hero" style="
+	  <?php if (get_field('hero_image')): ?>
+  background-image: url(<?php the_field('hero_image'); ?>)
+    <?php endif; ?>
+	">
         <div class="hero-content">
             <!-- the location title  -->
             <h1> <?php the_title(); ?> </h1>
