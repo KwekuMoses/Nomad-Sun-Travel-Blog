@@ -23,16 +23,16 @@
         <!-- make text white and center it -->
         <div class="hero-content white tc">
             <!-- the location title  -->
-            <h1 class="bold ma0 ttu hero-heading b"> <?php the_title(); ?> </h1>
+            <h1 class="b mt0 mb3 ttu hero-heading b archivo"> <?php the_title(); ?> </h1>
+
             <!-- the location subheading -->
             <?php if (get_field('subhead')): ?>
-
-            <p class="hero-subhead mb6 mt0 ttu"><?php the_field('subhead'); ?></p>
+            <p class="hero-subhead mb6 mt0 ttu tenor"><?php the_field('subhead'); ?></p>
             <?php endif; ?>
 
             <!-- formatted date  -->
             <?php if (get_field('date')): ?>
-            <p class="f6 date ma0 ttu tracked">
+            <p class="f6 date ma0 ttu tracked archivo">
                 <?php 
 			// convert  date into format that php can work with
 			// then format it to be nice + readable
