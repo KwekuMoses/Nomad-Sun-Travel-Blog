@@ -22,3 +22,7 @@ body {
 .hero-subhead {
   font-size: 64px;
 }
+
+.hero-heading {
+  letter-spacing: 0.05em;
+}

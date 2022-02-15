@@ -27,7 +27,7 @@
 
             <!-- the location subheading -->
             <?php if (get_field('subhead')): ?>
-            <p class="hero-subhead mb6 mt0 ttu tenor"><?php the_field('subhead'); ?></p>
+            <p class="hero-subhead mb6 mt0 ttu tenor mw7"><?php the_field('subhead'); ?></p>
             <?php endif; ?>
 
             <!-- formatted date  -->
