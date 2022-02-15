@@ -2,7 +2,7 @@ body {
   /* here we use our main typeface and set it on our body tag  */
   font-family: "Cardo", georgia, serif;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -10,7 +10,8 @@ body {
   font-family: "Cardo", georgia, serif;
 }
 
-.archivo {
+.archivo,
+.text-block h3 {
   font-family: "Archivo Black", sans-serif;
 }
 
@@ -24,5 +25,13 @@ body {
 }
 
 .hero-heading {
+  letter-spacing: 0.05em;
+}
+
+.text-block h3 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
   letter-spacing: 0.05em;
 }

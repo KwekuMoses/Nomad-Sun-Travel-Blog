@@ -11,47 +11,56 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <!-- background image for hero  -->
-    <!-- here is used an inline style attribute to attach the hero image as a css background directly onto the element -->
-
-    <!-- make the hero have a min height of 100vh, cover the background, center it, add flexbox and make the content center vertically and horizontally  -->
-    <section class="hero min-vh-100 cover bg-center flex items-center justify-center" style="
-	  <?php if (get_field('hero_image')): ?>
-			background-image: url(<?php the_field('hero_image'); ?>)
-				<?php endif; ?>
-				">
-        <!-- make text white and center it -->
-        <div class="hero-content white tc">
-            <!-- the location title  -->
-            <h1 class="b mt0 mb3 ttu hero-heading b archivo"> <?php the_title(); ?> </h1>
-
-            <!-- the location subheading -->
-            <?php if (get_field('subhead')): ?>
-            <p class="hero-subhead mb6 mt0 ttu tenor mw7"><?php the_field('subhead'); ?></p>
-            <?php endif; ?>
-
-            <!-- formatted date  -->
-            <?php if (get_field('date')): ?>
-            <p class="f6 date ma0 ttu tracked archivo">
-                <?php 
-			// convert  date into format that php can work with
-			// then format it to be nice + readable
-			echo date("F Y", strtotime(get_field('date')))
-			?>
-
-            </p>
-            <?php endif; ?>
-        </div>
-    </section>
-
-    <header class=" entry-header">
-
-    </header><!-- .entry-header -->
 
 
     <div class="entry-content">
+        <!-- if we have some flexible content, let’s loop through it -->
+        <?php if( have_rows('content') ): while ( have_rows('content') ) : the_row();
+  // if it’s a header, go through the data
+  if( get_row_layout() == 'header' ): ?>
 
-    </div><!-- .entry-content -->
+        <!-- here is the header -->
+        <div class="flex">
+            <div style="
+	  <?php if (get_field('hero_image')): ?>
+			background-image: url(<?php the_field('hero_image'); ?>)
+				<?php endif; ?>" class="w-60 min-vh-100 cover bg-center"></div>
+            <!-- here is the header content -->
+            <div class="w-40 flex items-center justify-center ph4">
+                <div class="tc">
+                    <p class="f6 archivo mt0 mb5 ttu tracked">
+                        <?php echo date("F Y", strtotime(get_field('date')))?>
+                    </p>
+                    <!-- standard wordpress data -->
+                    <h1 class="f1 archivo mt0 mb3 ttu">
+                        <?php the_title(); ?>
+                    </h1>
+
+                    <p class="f1 tenor mt0 mb4 ttu">
+                        <?php the_field('subhead'); ?>
+                    </p>
+                    <!-- specific to this component -->
+                    <p class="f4 cardo i measure">
+                        <?php the_sub_field('header_intro'); ?>
+                    </p>
+                </div>
+            </div>
+        </div><!-- .entry-content -->
+
+
+        <!-- if it’s a text component, show us the data -->
+        <?php elseif( get_row_layout() == 'text_block' ): ?>
+        <!-- the text block  -->
+        <div class="pv6 measure-wide center text-block f4">
+            <?php the_sub_field('text_content'); ?>
+
+        </div>
+        <?php endif; 
+endwhile; endif; ?>
+
+    </div>
+    <!-- here is the header backrgroundimage -->
+
 
     <footer class="entry-footer">
         <!-- <?php nomad_sun_entry_footer(); ?> -->
