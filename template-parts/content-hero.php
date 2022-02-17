@@ -11,16 +11,16 @@
     <!-- here is used an inline style attribute to attach the hero image as a css background directly onto the element -->
 
     <!-- make the hero have a min height of 100vh, cover the background, center it, add flexbox and make the content center vertically and horizontally  -->
-    <section class="hero min-vh-100 cover bg-center flex items-center justify-center" style="
-	  <?php nice_background('hero_image');  ?>">
+    <a class="db link hero min-vh-100 cover bg-center flex items-center justify-center" style="
+	  <?php nice_background('hero_image');  ?>" href="<?php the_permalink();?>">
         <!-- make text white and center it -->
-        <div class="hero-content white tc">
+        <div class="hero-content white tc ph3 ph4-l">
             <!-- the location title  -->
-            <h1 class="b mt0 mb3 ttu hero-heading archivo"> <?php the_title(); ?> </h1>
+            <h1 class="hero-heading f2 f1-l archivo b mt0 mb3 ttu lh-title"> <?php the_title(); ?> </h1>
 
             <!-- the location subheading -->
             <?php if (get_field('subhead')): ?>
-            <p class="hero-subhead mb6 mt0 ttu tenor mw7"><?php the_field('subhead'); ?></p>
+            <p class="hero-subhead f2 f1-l tenor mb5 mb6-l mt0 ttu lh-title"><?php the_field('subhead'); ?></p>
             <?php endif; ?>
 
             <!-- formatted date  -->
@@ -35,4 +35,4 @@
             </p>
             <?php endif; ?>
         </div>
-    </section>
+    </a>

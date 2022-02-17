@@ -13,6 +13,7 @@ body {
 .archivo,
 .text-block h3 {
   font-family: "Archivo Black", sans-serif;
+  font-weight: normal;
 }
 
 .archivo-regular {
@@ -21,11 +22,6 @@ body {
 
 .tenor {
   font-family: "Tenor Sans", sans-serif;
-}
-
-.hero-heading,
-.hero-subhead {
-  font-size: 64px;
 }
 
 .hero-heading {
@@ -75,4 +71,12 @@ body {
 
 .footer-content {
   background-color: #1c1c1c;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.gallery .gallery-image:last-of-type {
+  margin-bottom: 0;
 }
