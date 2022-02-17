@@ -63,3 +63,16 @@ body {
 .container {
   max-width: 1300px;
 }
+
+.explore-title {
+  margin-bottom: 48px;
+  max-width: 320px;
+}
+
+.description {
+  max-width: 860px;
+}
+
+.footer-content {
+  background-color: #1c1c1c;
+}

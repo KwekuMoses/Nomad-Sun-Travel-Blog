@@ -27,17 +27,16 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <div id="barba-wrapper">
 
+        <div id="page" class="barba-container relative">
+            <a class="skip-link screen-reader-text"
+                href="#primary"><?php esc_html_e( 'Skip to content', 'nomad-sun' ); ?></a>
 
-    <?php wp_body_open(); ?>
-    <div id="page" class="site">
-        <a class="skip-link screen-reader-text"
-            href="#primary"><?php esc_html_e( 'Skip to content', 'nomad-sun' ); ?></a>
+            <header id="masthead" class="site-header">
 
-        <header id="masthead" class="site-header">
-
-            <nav id="site-navigation" class="main-navigation">
-                <?php
+                <nav id="site-navigation" class="main-navigation">
+                    <?php
 			// wp_nav_menu(
 			// 	array(
 			// 		'theme_location' => 'menu-1',
@@ -45,5 +44,6 @@
 			// 	)
 			// );
 			?>
-            </nav><!-- #site-navigation -->
-        </header><!-- #masthead -->
+                </nav><!-- #site-navigation -->
+            </header><!-- #masthead -->
+            <div id="content" class="site-content">
