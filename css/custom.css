@@ -15,6 +15,10 @@ body {
   font-family: "Archivo Black", sans-serif;
 }
 
+.archivo-regular {
+  font-family: "Arhcivo", sans-serif;
+}
+
 .tenor {
   font-family: "Tenor Sans", sans-serif;
 }
@@ -43,4 +47,14 @@ body {
   margin-right: auto;
   height: 1px;
   background-color: #1c1c1c;
+}
+
+/* override inline size styles, so that it scales  */
+.gallery-image img {
+  width: auto !important;
+  height: auto !important;
+}
+
+.caption {
+  max-width: 870px;
 }

@@ -21,12 +21,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cardo:ital@0;1&family=Tenor+Sans&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cardo:ital@0;1&family=Tenor+Sans&Archivo&display=swap"
         rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+
+
     <?php wp_body_open(); ?>
     <div id="page" class="site">
         <a class="skip-link screen-reader-text"

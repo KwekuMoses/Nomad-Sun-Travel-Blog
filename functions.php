@@ -177,3 +177,15 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+// Function for formatting dates
+function nice_date($date) {
+	echo date("F Y", strtotime(get_field($date)));
+}
+
+// return a nicely formatted background image 
+function nice_background($image_field) {
+
+	echo 'background-image: url(' . get_field($image_field) . ')';
+}

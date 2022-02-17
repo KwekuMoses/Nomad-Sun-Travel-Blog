@@ -12,10 +12,7 @@
 
     <!-- make the hero have a min height of 100vh, cover the background, center it, add flexbox and make the content center vertically and horizontally  -->
     <section class="hero min-vh-100 cover bg-center flex items-center justify-center" style="
-	  <?php if (get_field('hero_image')): ?>
-			background-image: url(<?php the_field('hero_image'); ?>)
-				<?php endif; ?>
-				">
+	  <?php nice_background('hero_image');  ?>">
         <!-- make text white and center it -->
         <div class="hero-content white tc">
             <!-- the location title  -->
@@ -32,7 +29,7 @@
                 <?php 
 			// convert  date into format that php can work with
 			// then format it to be nice + readable
-			echo date("F Y", strtotime(get_field('date')))
+            nice_date(get_field('date'))
 			?>
 
             </p>
