@@ -140,10 +140,8 @@ add_action( 'widgets_init', 'nomad_sun_widgets_init' );
 function nomad_sun_scripts() {
 	wp_enqueue_style( 'nomad-sun-style', get_stylesheet_uri(), array(), _S_VERSION );
 	
-	wp_enqueue_style( 'nomad-sun-tachyons', get_template_directory_uri() . 
-	'./css/tachyons.css' );
-	wp_enqueue_style( 'nomad-sun-custom', get_template_directory_uri() . 
-	'./css/custom.css' );
+	wp_enqueue_style( 'nomad-sun-tachyons', get_template_directory_uri() . '/css/tachyons.css' );
+	wp_enqueue_style( 'nomad-sun-custom', get_template_directory_uri() . '/css/custom.css' );
 
 	//Here we load barba.js from our js folder
 	wp_enqueue_script( 'nomadsun-barba', get_template_directory_uri() .  '/js/barba.js');
